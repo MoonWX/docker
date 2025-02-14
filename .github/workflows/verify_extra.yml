@@ -59,7 +59,7 @@ jobs:
       id: build
       uses: docker/build-push-action@v5
       with:
-        platforms: linux/amd64
+        platforms: linux/arm64
         file: extra_check/Dockerfile
         context: extra_check
         push: false
