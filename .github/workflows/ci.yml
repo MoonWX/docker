@@ -89,7 +89,7 @@ jobs:
     with:
       dockerfile_name: Dockerfile-openjdk-${{ matrix.distribution }}
       build_args: |-
-        BASE_IMAGE=${{ matrix.extra == 'true' && format('mcdreforged/mcdreforged-extra@{0}', needs.extra.outputs.digest) || needs.prepare.outputs.base_image }}
+        BASE_IMAGE=${{ matrix.extra == 'true' && format('moonwx/mcdreforged-extra@{0}', needs.extra.outputs.digest) || needs.prepare.outputs.base_image }}
         JAVA=${{ matrix.java }}
       base_target_tags: ${{ needs.prepare.outputs.base_target_tags }}
       image_name: moonwx/mcdreforged-${{ matrix.distribution }}
