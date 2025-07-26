@@ -40,7 +40,7 @@ jobs:
             
             // use digest whenever possible. fallback to tag name if digest not found
             let baseDigest = process.env.BASE_IMAGE_DIGEST
-            let baseImage = baseDigest ? `mcdreforged/mcdreforged@${baseDigest}` : `mcdreforged/mcdreforged:${baseImageTags[0]}`
+            let baseImage = baseDigest ? `moonwx/mcdreforged@${baseDigest}` : `moonwx/mcdreforged:${baseImageTags[0]}`
             core.setOutput('base_image', baseImage)
             
             let tagsMultiline = baseImageTags.join('\n')
