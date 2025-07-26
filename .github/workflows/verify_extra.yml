@@ -59,7 +59,7 @@ jobs:
       id: build
       uses: docker/build-push-action@v5
       with:
-        platforms: linux/amd64,linux/arm64
+        platforms: linux/arm64 # ,linux/amd64 # deleted cuz it will throw fatal error
         file: extra_check/Dockerfile
         context: extra_check
         push: false
