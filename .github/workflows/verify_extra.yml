@@ -59,7 +59,7 @@ jobs:
       id: build
       uses: docker/build-push-action@v5
       with:
-        platforms: linux/arm64 # ,linux/amd64 # deleted cuz it will throw fatal error
+        platforms: linux/amd64
         file: extra_check/Dockerfile
         context: extra_check
         push: false
@@ -69,7 +69,7 @@ jobs:
     - name: pip freeze
       uses: addnab/docker-run-action@v3
       with:
-        platforms: linux/arm64 # ,linux/amd64 # deleted cuz it will throw fatal error
+        platforms: linux/amd64
         image: ci-extra-verification:latest
         options: -v ${{ github.workspace }}:/github_workspace
         run: |-
