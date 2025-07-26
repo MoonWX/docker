@@ -69,6 +69,7 @@ jobs:
     - name: pip freeze
       uses: addnab/docker-run-action@v3
       with:
+        platforms: linux/arm64 # ,linux/amd64 # deleted cuz it will throw fatal error
         image: ci-extra-verification:latest
         options: -v ${{ github.workspace }}:/github_workspace
         run: |-
